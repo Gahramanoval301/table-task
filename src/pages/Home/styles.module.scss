@@ -1,0 +1,64 @@
+/* Home Page Styles */
+@import '../../styles/mixins.scss';
+@import '../../styles/colors.scss';
+
+.homeContainer {
+  height: 100vh;
+  background: linear-gradient(to right, $white-shadow, $white);
+  padding: 2rem;
+  text-align: center;
+
+  @include flex-center;
+
+  .hero {
+    max-width: 1200px;
+
+    .title {
+      font-size: 3rem;
+      font-weight: bold;
+      color: $blue-100;
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: $gray-50;
+      margin-bottom: 2rem;
+    }
+
+    .actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .primaryButton {
+      @include btn();
+    }
+
+    .secondaryButton {
+      @include btn($blue-10, $blue-100);
+    }
+
+    .secondaryButton:hover {
+      background-color: $blue-20;
+    }
+  }
+}
+
+
+
+@media screen and (max-width:600px) {
+  .homeContainer {
+    .hero {
+      .title {
+        font-size: 2rem;
+      }
+
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.notFoundcontainer {
+  height: 100vh;
+  overflow: hidden;
+  color: $gray-80;
+  padding: 1rem;
+  text-align: center;
+
+  @include flex-center;
+  flex-direction: column;
+
+  .code {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: $red-50;
+  }
+
+  .message {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: $blue-50;
+    color: $white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .link:hover {
+    background-color: $blue-60;
+  }
+}

@@ -1,0 +1,64 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/colors.scss';
+
+
+
+.aboutContainer {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: $gray-80;
+    line-height: 1.6;
+
+    .backButton {
+        margin-bottom: 1rem;
+        padding: 0.5rem 1.2rem !important;
+
+        @include btn;
+    }
+
+
+    .description {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: $blue-50;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        margin-bottom: 0.5rem;
+        color: $blue-60;
+    }
+
+    ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+    }
+
+    .subList {
+        list-style: circle;
+        padding-left: 1.5rem;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+
+    .aboutContainer {
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+
+        }
+    }
+}

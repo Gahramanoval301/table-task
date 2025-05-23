@@ -1,0 +1,43 @@
+:root,
+[data-theme="light"]:root {
+
+    //primary colors
+    --theme-dashboard: #f4f4f4;
+    --theme-black: #2e2e2e;
+    --theme-white: #ffffff;
+    --theme-white-shadow: #eef2f3;
+    --theme-blue-100: #1a202c;
+    --theme-blue-60: #0051a2;
+    --theme-blue-50: #0070f3;
+    --theme-blue-20: #cbd5e0;
+    --theme-blue-10: #e2e8f0;
+    --theme-gray-30: #ccc;
+    --theme-gray-50: #4a5568;
+    --theme-gray-80: #333;
+    --theme-gray-100: #1a202c;
+    
+    //secondary colrs
+    --theme-red-50: #ff4c4c ;
+}
+
+// [data-theme="dark"]:root {
+//     --theme-dashboard: #2e2e2e;
+// }
+
+//primary colors 
+$black: var(--theme-black);
+$white: var(--theme-white);
+$white-shadow: var(--theme-white-shadow);
+$dashboard: var(--theme-dashboard);
+$gray-50: var(--theme-gray-50);
+$gray-30: var(--theme-gray-30);
+$gray-80: var(--theme-gray-80);
+$gray-100: var(--theme-gray-100);
+$blue-100: var(--theme-blue-100);
+$blue-60: var(--theme-blue-60);
+$blue-50: var(--theme-blue-50);
+$blue-10: var(--theme-blue-10);
+$blue-20: var(--theme-blue-20);
+
+//secondary colorss 
+$red-50: var(--theme-red-50);

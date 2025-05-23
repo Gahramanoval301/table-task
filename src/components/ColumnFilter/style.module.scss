@@ -1,0 +1,31 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/colors.scss";
+
+.filterContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+
+
+    .label {
+        font-size: 1.1rem;
+        color: $gray-50;
+        cursor: text;
+    }
+
+    .srOnly {
+        position: absolute !important;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+
+    .input {
+        @include input-style;
+    }
+}

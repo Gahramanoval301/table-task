@@ -1,0 +1,42 @@
+@import "./colors.scss";
+
+@mixin btn($bg-color: $blue-50, $text-color: white) {
+  padding: 0.75rem 1.5rem;
+  background-color: $bg-color;
+  color: $text-color;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  &:hover{
+    background-color: $blue-60;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin input-style {
+  outline: none;
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid $white-shadow;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: $gray-80;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: $gray-50;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: $blue-50;
+    box-shadow: 0 0 0 3px $blue-100;
+  }
+}

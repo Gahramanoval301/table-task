@@ -1,0 +1,41 @@
+@import "./colors.scss";
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: $black;
+  background-color: $dashboard;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+//other glibal styles
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0070f3;
+  border-radius: 4px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #0059c1;
+}
+::selection {
+  background-color: #0070f3;
+  color: $red-50;
+}
