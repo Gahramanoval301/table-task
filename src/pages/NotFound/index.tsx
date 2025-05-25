@@ -1,4 +1,4 @@
-import styles from './styles.module.scss';
+import styles from './NotFound.module.scss';
 import { Link } from 'react-router';
 
 const NotFound = () => {

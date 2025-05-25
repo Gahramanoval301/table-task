@@ -1,6 +1,6 @@
 import { Link } from 'react-router'
 import NoticeTable from '../../components/NoticeTable'
-import styles from "./style.module.scss"
+import styles from "./Notices.module.scss"
 
 const Notices = () => {
   return (

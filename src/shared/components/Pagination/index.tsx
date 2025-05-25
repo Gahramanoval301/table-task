@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './style.module.scss';
+import styles from './Pagination.module.scss';
 import { useNavigate } from 'react-router';
 
 const paginationMap = [

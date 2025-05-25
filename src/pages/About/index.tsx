@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import styles from './styles.module.scss';
+import styles from './About.module.scss';
 
 const About = () => {
     return (

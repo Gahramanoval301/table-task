@@ -8,7 +8,10 @@ function WebRouting() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/notices" element={<Notices />} />
+            <Route path="/notices"
+                element={
+                        <Notices />
+                } />
             <Route path="/about" element={<About />} />
             <Route path="*" element={<NotFound />} />
         </Routes>

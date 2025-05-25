@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from "./style.module.scss"
-import { FILTER_OPTIONS } from '../../utils/constants';
+import styles from "./GlobalFilter.module.scss"
+import { FILTER_OPTIONS } from '../../../utils/constants';
 
 interface GlobalFilterProps {
     filter: string | undefined;

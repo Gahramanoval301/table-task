@@ -1,4 +1,4 @@
-import ColumnFilter from "../../components/ColumnFilter";
+import ColumnFilter from "../../shared/components/ColumnFilter";
 
 export const FILTER_OPTIONS = {
     All: '',
