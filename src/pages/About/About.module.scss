@@ -1,7 +1,5 @@
-@import '../../styles/mixins.scss';
-@import '../../styles/colors.scss';
-
-
+@use '../../styles/colors' as *;
+@use '../../styles/mixins' as *;
 
 .aboutContainer {
     padding: 2rem;

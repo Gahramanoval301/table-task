@@ -1,4 +1,4 @@
-@import "./colors.scss";
+@use "./colors.scss" as *;
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;

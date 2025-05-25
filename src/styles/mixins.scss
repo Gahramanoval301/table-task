@@ -1,5 +1,4 @@
-@import "./colors.scss";
-
+@use './colors.sccss' as *;
 @mixin btn($bg-color: $blue-50, $text-color: white) {
   padding: 0.75rem 1.5rem;
   background-color: $bg-color;
