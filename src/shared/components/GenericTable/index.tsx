@@ -1,4 +1,3 @@
-// components/GenericTable.tsx
 import React from 'react';
 import {
   useTable,
