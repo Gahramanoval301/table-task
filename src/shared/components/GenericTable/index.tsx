@@ -57,8 +57,8 @@ function GenericTable<T extends object>({
 
       <table {...getTableProps()} className={styles.table}>
         <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
+          {headerGroups.map((headerGroup, id) => (
+            <tr {...headerGroup.getHeaderGroupProps()} key={id}>
               {headerGroup.headers.map((column) => {
                 const col = column as typeof column & {
                   canFilter?: boolean;
