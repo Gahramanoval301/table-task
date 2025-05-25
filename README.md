@@ -1,54 +1,131 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Hydra Api Structure
 
-Currently, two official plugins are available:
+Hydra API Structure is a responsive React + TypeScript application that displays notices from JSON files with advanced table features such as filtering, sorting, and pagination. It uses react-table for table handling, framer-motion for animations, axios for API fetching, and SCSS for styling.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Acknowledgements
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Built with [React](https://reactjs.org/) and TypeScript for a robust frontend experience.
+- Table functionality powered by [react-table](https://react-table.tanstack.com/).
+- Smooth animations implemented using [framer-motion](https://www.framer.com/motion/).
+- API requests handled with [axios](https://axios-http.com/).
+- Styling done with [Sass (SCSS)](https://sass-lang.com/) for modular and maintainable styles.
+- Vite
+ 
+## Authors
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [@Gahramanova Leman](https://www.github.com/Gahramanoval301)
+
+
+## Folder Structure
+```bash
+public
+|       notices.json
+|       notices_page2.json
+|       notices_page3.json
+|       vite.svg
+|
+|---src
+    |   App.tsx
+    |   main.tsx
+    |   vite-env.d.ts
+    |
+    |---api
+    |       axiosInstance.ts
+    |       notices.ts
+    |
+    |---assets
+    |       react.svg
+    |
+    |---components
+    |   |---NoticeTable
+    |           index.tsx
+    |
+    |---pages
+    |   |---About
+    |   |       About.module.scss
+    |   |       index.tsx
+    |   |
+    |   |---Home
+    |   |       Home.module.scss
+    |   |       index.tsx
+    |   |
+    |   |---NotFound
+    |   |       index.tsx
+    |   |       NotFound.module.scss
+    |   |
+    |   |---Notices
+    |           index.tsx
+    |           Notices.module.scss
+    |
+    |---routing
+    |       route.tsx
+    |
+    |---shared
+    |   |---animations
+    |   |       index.ts
+    |   |
+    |   |---components
+    |       AnimatedButton
+    |       |       index.tsx
+    |       |
+    |       |---ColumnFilter
+    |       |       ColumnFilter.module.scss
+    |       |       index.tsx
+    |       |
+    |       |---GenericTable
+    |       |       GenericTable.module.scss
+    |       |       index.tsx
+    |       |
+    |       |---GlobalFilter
+    |       |       GlobalFilter.module.scss
+    |       |       index.tsx
+    |       |
+    |       |---Loader
+    |       |       index.tsx
+    |       |
+    |       |---Pagination
+    |               index.tsx
+    |               Pagination.module.scss
+    |
+    |---styles
+    |       colors.scss
+    |       global.scss
+    |       mixins.scss
+    |       reset.scss
+    |
+    |---utils
+        |---constants
+        |       index.ts
+        |
+        |---hooks
+        |       useNotices.tsx
+        |
+        |---types
+                index.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Features
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
+- Responsive data table with sorting, filtering, and pagination
+
+- Global and column-specific filters
+
+- Smooth UI animations using framer-motion
+
+- Fetches notices data from local JSON files via Axios
+
+- Modular and reusable React components with TypeScript
+
+- SASS/SCSS based styling with global and component-specific styles
+
+
+## CSS Files
+
+- `mixins.scss` — Contains reusable CSS mixins to keep styles DRY.
+- `global.scss` — Includes global styles such as fonts, body styling, scrollbars, and loaders.
+- `colors.scss` — Defines color variables for both dark and light themes.
+
