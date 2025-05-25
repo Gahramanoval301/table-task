@@ -32,9 +32,7 @@ function GenericTable<T extends object>({
     useGlobalFilter,
     useSortBy
   ) as TableInstance<T> & {
-    state: {
-      globalFilter: string;
-    };
+    state: { globalFilter: string };
     setGlobalFilter: (filterValue: string) => void;
   };
 
@@ -61,22 +59,35 @@ function GenericTable<T extends object>({
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
-              {headerGroup.headers.map((column) => (
-                <th {...column.getHeaderProps(column.getSortByToggleProps())} key={column.id}>
-                  {column.render('Header')}
-                  {column.isSorted ? (column.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+              {headerGroup.headers.map((column) => {
+                const col = column as typeof column & {
+                  canFilter?: boolean;
+                  isSorted?: boolean;
+                  isSortedDesc?: boolean;
+                  getSortByToggleProps: () => never;
+                };
 
-                  <div
-                    onClick={(e) => e.stopPropagation()}
-                    onMouseDown={(e) => e.stopPropagation()}
+                return (
+                  <th
+                    {...column.getHeaderProps(col.getSortByToggleProps())}
+                    key={column.id}
                   >
-                    {column.canFilter ? column.render('Filter') : null}
-                  </div>
-                </th>
-              ))}
+                    {column.render('Header')}
+                    {col.isSorted ? (col.isSortedDesc ? ' 🔽' : ' 🔼') : ''}
+
+                    <div
+                      onClick={(e) => e.stopPropagation()}
+                      onMouseDown={(e) => e.stopPropagation()}
+                    >
+                      {col.canFilter ? column.render('Filter') : null}
+                    </div>
+                  </th>
+                );
+              })}
             </tr>
           ))}
         </thead>
+
         <tbody {...getTableBodyProps()}>
           {rows.map((row) => {
             prepareRow(row);
