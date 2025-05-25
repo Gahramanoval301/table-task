@@ -1,7 +1,7 @@
 import styles from './Home.module.scss';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { fadeInUp, staggerContainer, defaultTransition } from '../../shared/animations';
+import AnimatedButton from '../../shared/components/AnimatedButton';
 
 const Home = () => {
     return (
@@ -33,25 +33,12 @@ const Home = () => {
                     initial="initial"
                     animate="animate"
                 >
-                    <motion.div
-                        variants={fadeInUp}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <Link to="/notices" className={styles.primaryButton}>
-                            View Notices
-                        </Link>
-                    </motion.div>
-
-                    <motion.div
-                        variants={fadeInUp}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                    >
-                        <Link to="/about" className={styles.secondaryButton}>
-                            Learn More
-                        </Link>
-                    </motion.div>
+                    <AnimatedButton to="/notices" className={styles.primaryButton}>
+                        View Notices
+                    </AnimatedButton>
+                    <AnimatedButton to="/about" className={styles.secondaryButton}>
+                        Learn More
+                    </AnimatedButton>
                 </motion.div>
             </div>
         </div>
